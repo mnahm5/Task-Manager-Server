@@ -7,3 +7,7 @@ function get_connection() {
 function is_logged_in() {
     return (isset($_SESSION['userId'])) ? true : false;
 }
+
+function date_converter($timestamp) {
+    return date("g:iA - l jS F ",$timestamp);
+}

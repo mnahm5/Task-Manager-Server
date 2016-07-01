@@ -2,8 +2,8 @@
 include "bootstrap.php";
 $con = get_connection();
 
-$username = "mnahm5";
-$password = "password";
+$username = $_POST["username"];
+$password = $_POST["password"];
 $response = array();
 $response["success"] = false;
 

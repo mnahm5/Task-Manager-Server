@@ -11,3 +11,7 @@ function is_logged_in() {
 function date_converter($timestamp) {
     return date("g:iA - l jS F ",$timestamp);
 }
+
+function get_date($timestamp) {
+    return date("l jS F ",$timestamp);
+}

@@ -21,8 +21,14 @@ try {
             if (!$stmt->execute()) {
                 throw new Exception("Statement 2 Failed");
             }
-            $con->commit();
-            $response["success"] = true;
+            if ($stmt->prepare("DELETE FROM `tasks` WHERE `projectId`=?")) {
+                $stmt->bind_param("i", $projectId);
+                if (!$stmt->execute()) {
+                    throw new Exception("Statement 3 Failed");
+                }
+                $con->commit();
+                $response["success"] = true;
+            }
         }
     }
 }

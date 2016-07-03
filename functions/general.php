@@ -13,5 +13,5 @@ function date_converter($timestamp) {
 }
 
 function get_date($timestamp) {
-    return date("l jS F ",$timestamp);
+    return date("l d-m-Y",$timestamp);
 }

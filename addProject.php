@@ -29,6 +29,8 @@ try {
             }
             $con->commit();
             $response["success"] = true;
+            $response["newProjectId"] = $projectId;
+            $response["newDateCreated"] = $dateCreated;
         }
     }
 }
